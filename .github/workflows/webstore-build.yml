@@ -13,14 +13,14 @@ jobs:
            runs-on: ubuntu-latest
 
            steps:
-                - name:  checkout
-                  uses: actions/checkout@v3.5.3
+                - name: Checkout
+                  uses: actions/checkout@v4.2.2
 
-                - name:  restore
+                - name: restore
                   uses: dotnet restore
 
-                - name:  checkout
+                - name: checkout
                   uses: dotnet build --configuration release
 
-                - name:  checkout
+                - name: checkout
                   uses: dotnet publish --configuration publish
